@@ -6,3 +6,7 @@ applications:
   name: Chatbot-liuyc
   host: Chatbot-liuyc
   disk_quota: 1024M
+services:
+  - Conversation-8b
+  - Speech to Text-32
+  - Text2Speech-cz
