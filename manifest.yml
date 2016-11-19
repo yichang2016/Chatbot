@@ -1,12 +1,12 @@
 applications:
-- path: Chatbot-0.0.1.war
+- path: target/Chatbot-0.0.1.war
   memory: 512M
   instances: 1
   domain: mybluemix.net
   name: Chatbot-liuyc
   host: Chatbot-liuyc
   disk_quota: 1024M
-services:
-  - Conversation-8b
-  - Speech to Text-32
-  - Text2Speech-cz
+  buildpack: liberty-for-java
+  env:
+    CONVERSATION_WORKSPACE_ID: fed00f00-3ef9-42cc-a740-a6f7f1916e0a
+    CAR_SERVICE_HOST: webchatbotcar.mybluemix.net
